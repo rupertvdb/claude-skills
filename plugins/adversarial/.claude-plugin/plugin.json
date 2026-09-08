@@ -1,0 +1,10 @@
+{
+  "name": "adversarial",
+  "description": "/adversarial — dispatch a fresh, hostile, read-only reviewer (cold context, pinned to a strong model) against the code or plan this thread just produced. Report-only: it finds the fatal flaw, you decide what to fix.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rupert (rupertvdb)",
+    "url": "https://github.com/rupertvdb"
+  },
+  "keywords": ["code-review", "red-team", "adversarial", "subagent", "quality"]
+}

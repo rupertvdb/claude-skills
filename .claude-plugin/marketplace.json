@@ -1,0 +1,23 @@
+{
+  "name": "claude-skills",
+  "owner": {
+    "name": "Rupert (rupertvdb)",
+    "url": "https://github.com/rupertvdb"
+  },
+  "metadata": {
+    "description": "Rupert's Claude Code skills — each one an independently installable plugin.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "adversarial",
+      "source": "./plugins/adversarial",
+      "description": "/adversarial — dispatch a fresh, hostile, read-only reviewer (cold context, pinned to a strong model) against the code or plan this thread just produced. Report-only: it finds the fatal flaw, you decide what to fix.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Rupert (rupertvdb)"
+      },
+      "keywords": ["code-review", "red-team", "adversarial", "subagent", "quality"]
+    }
+  ]
+}
