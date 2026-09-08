@@ -114,7 +114,8 @@ would bias it toward our conclusion:
 
 ### Step 3: dispatch the isolated reviewer
 
-Use the **Agent tool** (subagent, e.g. `subagent_type: "general-purpose"`),
+Use the subagent dispatch tool (named **Agent** or **Task** depending on your
+Claude Code version; e.g. `subagent_type: "general-purpose"`),
 `model` per the arg (**default `opus`**), and run it in the foreground so the
 findings come back before you respond. The prompt below is the contract. Keep
 the word `ultrathink` unless `-quick` was passed.

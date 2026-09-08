@@ -11,13 +11,16 @@ take exactly the one you want and nothing else.
 /plugin install adversarial@claude-skills
 ```
 
-That's it. Type `/adversarial` in any Claude Code session.
+Then invoke it as **`/adversarial:adversarial`** (Claude Code namespaces plugin
+skills as `plugin:skill` to prevent collisions), or just ask in plain English —
+"red-team this", "poke holes in what we just did" — and the skill triggers
+itself.
 
 ## What's in here
 
 | Plugin | What it does |
 |---|---|
-| [`adversarial`](plugins/adversarial/skills/adversarial/SKILL.md) | `/adversarial` — dispatches a fresh, hostile, **read-only** reviewer against the code or plan your session just produced. The reviewer runs in an isolated subagent with a cold context (it never sees the thread's rationalisations) and is pinned to a strong model (Opus by default), so it can't be talked into liking the work. Report-only: it returns ranked findings (BLOCKER / MAJOR / MINOR, each with a concrete failure scenario) and a SHIP / FIX-FIRST / RETHINK verdict. You decide what to act on. |
+| [`adversarial`](plugins/adversarial/skills/adversarial/SKILL.md) | `/adversarial:adversarial` — dispatches a fresh, hostile, **read-only** reviewer against the code or plan your session just produced. The reviewer runs in an isolated subagent with a cold context (it never sees the thread's rationalisations) and is pinned to a strong model (Opus by default), so it can't be talked into liking the work. Report-only: it returns ranked findings (BLOCKER / MAJOR / MINOR, each with a concrete failure scenario) and a SHIP / FIX-FIRST / RETHINK verdict. You decide what to act on. |
 
 More coming — each future skill lands as its own plugin in `plugins/`.
 
