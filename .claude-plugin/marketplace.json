@@ -4,8 +4,10 @@
     "name": "Rupert (rupertvdb)",
     "url": "https://github.com/rupertvdb"
   },
-  "description": "Rupert's Claude Code skills — each one an independently installable plugin.",
-  "version": "1.0.0",
+  "metadata": {
+    "description": "Rupert's Claude Code skills — each one an independently installable plugin.",
+    "version": "1.0.0"
+  },
   "plugins": [
     {
       "name": "adversarial",
