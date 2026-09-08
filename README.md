@@ -35,6 +35,25 @@ proves otherwise"). In practice this catches the class of bug the author is
 structurally blind to — the hidden assumption, the unhandled partial failure,
 the auth gap that "obviously" couldn't happen.
 
+## Make it yours
+
+A skill is just a markdown file of instructions, so you can fork it for your
+own codebase. In your project, ask Claude:
+
+> Copy the adversarial skill from the installed plugin into this project's
+> `.claude/skills/` folder and adapt it for \<what your project is\>. Make the
+> reviewer specifically hunt for \<your project's invariants, e.g. "every
+> query must be scoped to the logged-in user"\>.
+
+The fork is versioned with your repo, survives plugin updates, and invokes as
+plain `/adversarial` (project skills aren't namespaced). Don't edit the
+installed plugin copy directly — it lives in Claude Code's plugin cache and
+gets overwritten on update.
+
+For a one-off, no fork needed: extra words after the command are passed to the
+reviewer as a scope hint, e.g.
+`/adversarial:adversarial focus on auth and tenant isolation`.
+
 ## Is this safe to install?
 
 Reasonable question to ask of anything you add to your agent. Here's exactly
